@@ -1,0 +1,9 @@
+spring:
+  cloud:
+    #    config 的配置需要放在 bootstrap.yml 中，其余内容可以仍旧放在 application.yml 中去.
+    config:
+      uri: http://127.0.0.1:8080  #config server 的连接地址。
+      label: master #当 config server 后端存储为 git 时，label 默认为 master.
+      profile: develop #使用的环境
+  application:
+    name: changSha  #本微服务应用名称，同时它也是 config server 后端存储仓库中的配置文件名称.
